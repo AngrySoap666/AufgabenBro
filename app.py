@@ -1,28 +1,52 @@
 import streamlit as st
 import random
 
-st.title("Aufgaben-Bro")
+st.title("🧼 Aufgaben-Bro für Larry 🧼")
+
+# Bunter Header
+st.markdown("<h3 style='color:#6A1B9A;'>Los geht's mit den Aufgaben! 💪</h3>", unsafe_allow_html=True)
 
 alle_aufgaben = [
-    "Staubsagen", "Boden Wischen", "Geschirr spülen", "Sofa schicki machen", "Tisch aufräumen und abwischen", "Wäsche waschen", "Müll rausbringen",
-    "Dusche putzen", "Bad aufräumen", "Kühlschrank checken", "Schildegard küsschen geben", "Wasser trinken! Wichtig und richtig",
-    "Bettchen machen und ggf. neu beziehen", "mach 1 kleine Pausi", "Das machst du toll!", "Ich bin stolzi", "ich hab dich lieb", "gönn dir 1 Snacki"
-    ]
+    "Staubsaugen 🧹",
+    "Boden wischen 🧽",
+    "Geschirr spülen 🍽️",
+    "Sofa schicki machen 🛋️",
+    "Tisch aufräumen und abwischen 🧴",
+    "Wäsche waschen 🧺",
+    "Müll rausbringen 🗑️",
+    "Dusche putzen 🚿",
+    "Bad aufräumen 🛁",
+    "Kühlschrank checken 🧊",
+    "Schildegard Küsschen geben 😘",
+    "Wasser trinken! Wichtig und richtig 💧",
+    "Bettchen machen und ggf. neu beziehen 🛏️",
+    "Mach 1 kleine Pausi ☕",
+    "Das machst du toll! 👏",
+    "Ich bin stolzi 😎",
+    "Ich hab dich lieb ❤️",
+    "Gönn dir 1 Snacki 🍪"
+]
 
 if "verbleibende_aufgaben" not in st.session_state:
     st.session_state.verbleibende_aufgaben = alle_aufgaben.copy()
 
-if st.button("Welche Aufgabe soll ich machen?"):
-    if st.session_state.verbleibende_aufgaben:
-        aufgabe = random.choice(st.session_state.verbleibende_aufgaben)
-        st.session_state.verbleibende_aufgaben.remove(aufgabe)
-        st.success(f"Deine Aufgabe: **{aufgabe}**")
+col1, col2 = st.columns(2)
 
-    else:
-        st.balloons()
-        st.info("Alle Aufgaben geschafft! Jetzt kannst du chillen und deine Eierstöcke schaukeln.")
+with col1:
+    if st.button("Welche Aufgabe soll ich machen?"):
+        if st.session_state.verbleibende_aufgaben:
+            aufgabe = random.choice(st.session_state.verbleibende_aufgaben)
+            st.session_state.verbleibende_aufgaben.remove(aufgabe)
+            st.success(f"✨ Deine Aufgabe: **{aufgabe}**")
+        else:
+            st.balloons()
+            st.info("🎉 Alle Aufgaben geschafft! Jetzt kannst du chillen und deine Eierstöcke schaukeln. 🥳")
 
-if st.button("Neustarten") :
-    st.session_state.verbleibende_aufgaben = alle_aufgaben.copy()
-    st.info("Liste wurde zurückgesetzt")
-    
+with col2:
+    if st.button("Neustarten"):
+        st.session_state.verbleibende_aufgaben = alle_aufgaben.copy()
+        st.info("🔄 Liste wurde zurückgesetzt")
+
+# Footer
+st.markdown("---")
+st.markdown("<small style='color:gray;'>Programm von AngrySoap & Mexy 💻💜</small>", unsafe_allow_html=True)
