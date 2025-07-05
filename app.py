@@ -31,8 +31,7 @@ if st.button("🦩 Welche Aufgabe soll ich machen? 🦩"):
         st.session_state.verbleibende_aufgaben.remove(neue_aufgabe)
         st.session_state.aktuelle_aufgabe = neue_aufgabe
     else:
-        st.balloons()
-        st.image("https://media.giphy.com/media/YOX5DJzV6TfI7dAfxh/giphy.gif", caption="💖 Schildegard sagt: CHILL, Baby 💖")
+        st.image("https://media4.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif", caption="🎆DU HAST ALLES GESCHAFFT!!! 💖 Schildegard sagt: CHILL, Baby 💖")
         st.session_state.aktuelle_aufgabe = None
 
 # In Progress
