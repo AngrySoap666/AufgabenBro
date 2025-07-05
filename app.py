@@ -49,6 +49,11 @@ with col1:
             st.image("https://media4.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif", caption="🎆DU HAST ALLES GESCHAFFT!!!")
             st.info("🎉 Alle Aufgaben geschafft! Jetzt kannst du chillen und deine Eierstöcke schaukeln. 🥳")
 
+if st.session_state.verlauf:
+    st.subheader("Was du schon geschafft hast:")
+    for aufgabe in st.session_state.verlauf:
+        st.markdown(f"✅ **{aufgabe}**")
+
 with col2:
     if st.button("Neustarten"):
         st.session_state.verbleibende_aufgaben = alle_aufgaben.copy()
