@@ -4,7 +4,7 @@ import random
 st.markdown("<h1 style='color:hotpink;'>🐢 Larrys Aufgaben-Bro 🐆</h1>", unsafe_allow_html=True)
 
 alle_aufgaben = [
-    "Staubsagen", "Boden Wischen", "Geschirr spülen", "Sofa schicki machen", 
+    "Staubsaugen", "Boden Wischen", "Geschirr spülen", "Sofa schicki machen", 
     "Tisch aufräumen und abwischen", "Wäsche waschen", "Müll rausbringen",
     "Dusche putzen", "Bad aufräumen", "Kühlschrank checken", 
     "Schildegard küsschen geben", "Wasser trinken! Wichtig und richtig",
