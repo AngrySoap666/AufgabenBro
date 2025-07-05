@@ -30,6 +30,13 @@ alle_aufgaben = [
 if "verbleibende_aufgaben" not in st.session_state:
     st.session_state.verbleibende_aufgaben = alle_aufgaben.copy()
 
+gesamt = len(alle_aufgaben)
+verbleibend = len(st.session_state. verbleibende_aufgaben)
+erledigt = gesamt - verbleibend
+fortschritt = erledigt / gesamt
+
+st.progress(fortschritt)
+
 col1, col2 = st.columns(2)
 
 with col1:
