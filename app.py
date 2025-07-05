@@ -1,10 +1,7 @@
 import streamlit as st
 import random
 
-st.title("🧼 Aufgaben-Bro für Larry 🧼")
-
-# Bunter Header
-st.markdown("<h3 style='color:#6A1B9A;'>Los geht's mit den Aufgaben! 💪</h3>", unsafe_allow_html=True)
+st.title("Aufgaben-Bro")
 
 alle_aufgaben = [
     "Staubsaugen 🧹",
@@ -27,37 +24,34 @@ alle_aufgaben = [
     "Gönn dir 1 Snacki 🍪"
 ]
 
+# Initialisierung
 if "verbleibende_aufgaben" not in st.session_state:
     st.session_state.verbleibende_aufgaben = alle_aufgaben.copy()
 
-gesamt = len(alle_aufgaben)
-verbleibend = len(st.session_state. verbleibende_aufgaben)
-erledigt = gesamt - verbleibend
-fortschritt = erledigt / gesamt
+if "verlauf" not in st.session_state:
+    st.session_state.verlauf = []
 
-st.progress(fortschritt)
+# Button: Aufgabe anzeigen
+if st.button("Welche Aufgabe soll ich machen?"):
+    if st.session_state.verbleibende_aufgaben:
+        aufgabe = random.choice(st.session_state.verbleibende_aufgaben)
+        st.session_state.verbleibende_aufgaben.remove(aufgabe)
+        st.session_state.verlauf.append(aufgabe)
+    else:
+        st.image("https://media4.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif", caption="🎆DU HAST ALLES GESCHAFFT!!!")
+        st.info("Alle Aufgaben geschafft! Jetzt kannst du chillen und deine Eierstöcke schaukeln.")
 
-col1, col2 = st.columns(2)
-
-with col1:
-    if st.button("Welche Aufgabe soll ich machen?"):
-        if st.session_state.verbleibende_aufgaben:
-            aufgabe = random.choice(st.session_state.verbleibende_aufgaben)
-            st.session_state.verbleibende_aufgaben.remove(aufgabe)
-            st.success(f"✨ Deine Aufgabe: **{aufgabe}**")
-        else:
-            st.image("https://media4.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif", caption="🎆DU HAST ALLES GESCHAFFT!!!")
-            st.info("🎉 Alle Aufgaben geschafft! Jetzt kannst du chillen und deine Eierstöcke schaukeln. 🥳")
-
+# Fortschrittsanzeige
 if st.session_state.verlauf:
     st.subheader("Was du schon geschafft hast:")
     for aufgabe in st.session_state.verlauf:
         st.markdown(f"✅ **{aufgabe}**")
 
-with col2:
-    if st.button("Neustarten"):
-        st.session_state.verbleibende_aufgaben = alle_aufgaben.copy()
-        st.info("🔄 Liste wurde zurückgesetzt")
+# Button: Zurücksetzen
+if st.button("Neustarten"):
+    st.session_state.verbleibende_aufgaben = alle_aufgaben.copy()
+    st.session_state.verlauf = []
+    st.info("Liste wurde zurückgesetzt.")
 
 # Footer
 st.markdown("---")
