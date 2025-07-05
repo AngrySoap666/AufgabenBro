@@ -46,7 +46,7 @@ with col1:
             st.session_state.verbleibende_aufgaben.remove(aufgabe)
             st.success(f"✨ Deine Aufgabe: **{aufgabe}**")
         else:
-            st.image("https://i.giphy.com/media/3oEjHP8ELRNNlnlLGM/giphy.gif", caption="🎆DU HAST ALLES GESCHAFFT!!!")
+            st.image("https://cdn.pixabay.com/animation/2023/02/15/21-34-34-901_512.gif", caption="🎆DU HAST ALLES GESCHAFFT!!!")
             st.info("🎉 Alle Aufgaben geschafft! Jetzt kannst du chillen und deine Eierstöcke schaukeln. 🥳")
 
 with col2:
