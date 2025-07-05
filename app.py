@@ -46,7 +46,7 @@ with col1:
             st.session_state.verbleibende_aufgaben.remove(aufgabe)
             st.success(f"✨ Deine Aufgabe: **{aufgabe}**")
         else:
-            st.image("https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif", caption="🎆DU HAST ALLES GESCHAFFT!!!")
+            st.image("https://i.giphy.com/media/3oEjHP8ELRNNlnlLGM/giphy.gif", caption="🎆DU HAST ALLES GESCHAFFT!!!")
             st.info("🎉 Alle Aufgaben geschafft! Jetzt kannst du chillen und deine Eierstöcke schaukeln. 🥳")
 
 with col2:
@@ -56,4 +56,4 @@ with col2:
 
 # Footer
 st.markdown("---")
-st.markdown("<small style='color:gray;'>Programm von AngrySoap & Mexy 💻💜</small>", unsafe_allow_html=True)
+st.markdown("<small style='color:gray;'>Programm für Larry Barry von Mexy 💻💜</small>", unsafe_allow_html=True)
