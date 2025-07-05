@@ -33,8 +33,6 @@ if "verbleibende_aufgaben" not in st.session_state:
 if "verlauf" not in st.session_state:
     st.session_state.verlauf = []
 
-st.progress(fortschritt)
-
 col1, col2 = st.columns(2)
 
 with col1:
