@@ -56,7 +56,7 @@ if st.session_state.aktuelle_aufgabe:
         text-align: center;
         animation: pulse 1.5s infinite;
     '>    
-        ✨ {st.session_state.aktuelle_aufgabe} ✨ <br>
+        <span style='color: #4B0082; font-size: 26px;'>✨ {st.session_state.aktuelle_aufgabe} ✨</span>
         <span style='font-size: 16px; color: #c71585;'>🐆 du machst das mega 💖</span>
     </div>
     """, unsafe_allow_html=True)
@@ -65,9 +65,16 @@ if st.session_state.aktuelle_aufgabe:
         vergangene_zeit = time.time() - st.session_state.start_time
         if vergangene_zeit > 900:
             st.warning("⏰ Du bist schon 15 Minuten am schuften! Willst du eine kleine Rauchi-Pausi machen?")
+            
+if st.session_state.aktuelle_aufgabe:
+    st.markdown("-------------------------")
+    if st.button("⏸️ Ich brauch kurz Pause"):
+       st.info("🍵Pausenmodus aktiviert. Nimm dir Zeit - du machst das toll!✨")
 
-if st.button("⏸️ Ich brauch kurz Pause"):
-   st.info("🍵Pausenmodus aktiviert. Nimm dir Zeit - du machst das toll!✨")
+with st.sidebar:
+    if st.session_state.aktuelle_aufgabe:
+        if st.button("⏸️ Pause")
+            st. info("Kleine Pause eingelegt ☕")
 
 # Erledigt
 if st.session_state.verlauf:
