@@ -47,7 +47,7 @@ if st.session_state.aktuelle_aufgabe:
         border: 2px dotted hotpink;
         padding: 20px;
         border-radius: 30px;
-        background-image: url("https://i.pinimg.com/originals/43/87/64/4387641dd1cb8c0d62f1d336292e49f7.gif");
+        background-image: url("https://wallpaperaccess.com/full/841574.jpg");
         background-size: cover;
         box-shadow: 0 0 10px hot pink, 0 0 20px deeppink, 0 0 30px pink;
         color: deeppink;
@@ -55,11 +55,10 @@ if st.session_state.aktuelle_aufgabe:
         font-size: 22px;
         text-align: center;
         animation: pulse 1.5s infinite;
-    '>    
-        <span style='color: #4B0082; font-size: 26px;'>✨ {st.session_state.aktuelle_aufgabe} ✨</span>
-        <span style='font-size: 16px; color: #c71585;'>🐆 du machst das mega 💖</span>
-    </div>
-    """, unsafe_allow_html=True)
+        <span style='color: #4B0082; font-size: 26px;'>✨ {st.session_state.aktuelle_aufgabe} ✨</div>""",
+        unsafe_allow_html=True)
+     st.markdown(f"""<div style='font-size: 16px; color: #c71585;'>🐆 du machst das mega 💖</span>
+        </div>""", unsafe_allow_html=True)
 
     if st.session_state.start_time:
         vergangene_zeit = time.time() - st.session_state.start_time
@@ -73,8 +72,8 @@ if st.session_state.aktuelle_aufgabe:
 
 with st.sidebar:
     if st.session_state.aktuelle_aufgabe:
-        if st.button("⏸️ Pause"):
-            st. info("Kleine Pause eingelegt ☕")
+        if st.button("wird bald erweitert"):
+            st. info("freu dich drauf hihi☕")
 
 # Erledigt
 if st.session_state.verlauf:
@@ -87,5 +86,5 @@ if st.button("🔄 Neustarten"):
     st.session_state.verbleibende_aufgaben = alle_aufgaben.copy()
     st.session_state.verlauf = []
     st.session_state.aktuelle_aufgabe = None
-    st.success("💅 Aufgaben wurden zurückgesetzt, du wildes Faultier 🦥💕")
+    st.success("💅 Aufgaben wurden zurückgesetzt, du wilder Leopard 🦥💕")
 
