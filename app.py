@@ -2,6 +2,11 @@ import streamlit as st
 import random
 import time
 
+with st.sidebar:
+    if st.session_state.aktuelle_aufgabe:
+        if st.button("wird bald erweitert"):
+            st. info("freu dich drauf hihi☕")
+
 st.markdown("<h1 style='color:hotpink;'>🐢 Larrys Aufgaben-Bro 🐆</h1>", unsafe_allow_html=True)
 
 alle_aufgaben = [
@@ -70,11 +75,6 @@ if st.session_state.aktuelle_aufgabe:
     st.markdown("-------------------------")
     if st.button("⏸️ Ich brauch kurz Pause"):
        st.info("🍵Pausenmodus aktiviert. Nimm dir Zeit - du machst das toll!✨")
-
-with st.sidebar:
-    if st.session_state.aktuelle_aufgabe:
-        if st.button("wird bald erweitert"):
-            st. info("freu dich drauf hihi☕")
 
 # Erledigt
 if st.session_state.verlauf:
