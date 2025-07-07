@@ -18,7 +18,7 @@ if "verbleibende_aufgaben" not in st.session_state:
     st.session_state.verbleibende_aufgaben = alle_aufgaben.copy()
 
 if "start_time" not in st.session_state:
-    st.sesion_state.start_time = None
+   st.sesion_state.start_time = 0.0
     
 
 if "verlauf" not in st.session_state:
