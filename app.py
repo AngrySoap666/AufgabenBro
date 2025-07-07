@@ -44,11 +44,19 @@ if st.session_state.aktuelle_aufgabe:
     st.markdown("### 🐆 Gerade in Arbeit:")
     st.markdown(f"""
     <div style='border: 3px solid hotpink;
-        padding: 20px; border-radius: 30px;
-        background-image: url('https://wallpaperaccess.com/full/841574.jpg';
-        background-size: cover; color: deeppink; font-weight: bold; font-size: 22px;
-        text-align: center; animation: pulse 1.5s infinite;
-        <span style='color: #4B0082; font-size: 26px;'>✨ {st.session_state.aktuelle_aufgabe} ✨</div>""",
+        padding: 20px;
+        border-radius: 30px;
+        background-image: url('https://img1.picmix.com/output/stamp/normal/7/3/8/2/2292837_f7f8b.gif';
+        background-size: cover;
+        color: deeppink;
+        font-weight: bold;
+        font-size: 22px;
+        text-align: center;
+        display: block;
+        animation: pulse 1.5s infinite;
+        <span style='color: #4B0082;
+        font-size: 26px;
+        '>✨ {st.session_state.aktuelle_aufgabe} ✨</div>""",
         unsafe_allow_html=True)
     st.markdown(f"<div style='font-size: 16px; color: #c71585;'>🐆 du machst das mega 💖</div>",
         unsafe_allow_html=True)
