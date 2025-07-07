@@ -44,7 +44,7 @@ if st.session_state.aktuelle_aufgabe:
     st.markdown("### 🐆 Gerade in Arbeit:")
     st.markdown(f"""
     <div style='
-        border: 2px dotted hotpink, animation: blink 1s infinite;
+        border: 2px dotted hotpink;
         padding: 20px;
         border-radius: 20px;
         background: linear-gradient(135deg, #ffe6f0, #ffccff);
