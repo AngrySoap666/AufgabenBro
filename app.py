@@ -18,7 +18,7 @@ if "verbleibende_aufgaben" not in st.session_state:
     st.session_state.verbleibende_aufgaben = alle_aufgaben.copy()
 
 if "start_time" not in st.session_state:
-   st.sesion_state.start_time = 0.0
+   st.session_state.start_time = 0.0
     
 
 if "verlauf" not in st.session_state:
@@ -43,6 +43,22 @@ if st.button("🦩 Welche Aufgabe soll ich machen? 🦩"):
 # In Progress
 if st.session_state.aktuelle_aufgabe:
     st.markdown("### 🐆 Gerade in Arbeit:")
+    st.markdown(f"""
+    <div style=
+        border: 4px dashed hotpink;
+        padding: 10px;
+        border-radius 15px;
+        background: linear-gradient(45deg, #ffe6f9, #ffd1ff);
+        box-shadow: 0 0 15px pink;
+        text-align: center'>
+        <strong style='font-size: 24px;'>✨ {st.session_state.aktuelle_aufgabe} ✨</strong><br>
+        <span style='color: #c00cc;'>🐆 du machst das mega 💖</span>
+    </div>
+    """, unsafe_allow-html=True)
+
+
+
+
     st.info(f"🚧 **{st.session_state.aktuelle_aufgabe}** 🐢💨")
     if st.session_state.start_time:
         vergangene_zeit = time.time() - st.session_state.start_time
