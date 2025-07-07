@@ -60,10 +60,6 @@ if st.session_state.aktuelle_aufgabe:
     </div>
     """, unsafe_allow_html=True)
 
-
-
-
-    st.info(f"🚧 **{st.session_state.aktuelle_aufgabe}** 🐢💨")
     if st.session_state.start_time:
         vergangene_zeit = time.time() - st.session_state.start_time
         if vergangene_zeit > 900:
