@@ -9,8 +9,7 @@ alle_aufgaben = [
     "Tisch aufräumen und abwischen", "Wäsche waschen", "Müll rausbringen",
     "Dusche putzen", "Bad aufräumen", "Kühlschrank checken", 
     "Schildegard küsschen geben", "Wasser trinken! Wichtig und richtig",
-    "Bettchen machen und ggf. neu beziehen", "mach 1 kleine Pausi", 
-    "Das machst du toll!", "Ich bin stolzi", "ich hab dich lieb", 
+    "Bettchen machen und ggf. neu beziehen", 
     "gönn dir 1 Snacki"
 ]
 
