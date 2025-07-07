@@ -51,7 +51,7 @@ if st.session_state.aktuelle_aufgabe:
         box-shadow: 0 0 20px 5px rgba(255, 105, 180, 0.8);
         color: deeppink
         font-weight: bold;
-        font-size: 22px;
+        font-size: 28px;
         text-align: center;
         animation: pulse 2s infinite;
     '>    
