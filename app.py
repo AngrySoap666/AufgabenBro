@@ -48,12 +48,12 @@ if st.session_state.aktuelle_aufgabe:
         padding: 20px;
         border-radius: 20px;
         background: linear-gradient(135deg, #ffe6f0, #ffccff);
-        box-shadow: 0 0 20px 5px rgba(255, 105, 180, 0.8);
+        box-shadow: 0 0 10px hot pink, 0 0 20px deeppink, 0 0 30px pink;
         color: deeppink;
         font-weight: bold;
         font-size: 22px;
         text-align: center;
-        animation: pulse 1s infinite;
+        animation: pulse 1.5s infinite;
     '>    
         ✨ {st.session_state.aktuelle_aufgabe} ✨ <br>
         <span style='font-size: 16px; color: #c71585;'>🐆 du machst das mega 💖</span>
