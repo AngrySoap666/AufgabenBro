@@ -47,7 +47,7 @@ if st.session_state.aktuelle_aufgabe:
         border: 2px dotted hotpink;
         padding: 20px;
         border-radius: 30px;
-        background-image: url("https://i.gifer.com/7VE.gif");
+        background-image: url("https://i.pinimg.com/originals/43/87/64/4387641dd1cb8c0d62f1d336292e49f7.gif");
         background-size: cover;
         box-shadow: 0 0 10px hot pink, 0 0 20px deeppink, 0 0 30px pink;
         color: deeppink;
