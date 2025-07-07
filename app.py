@@ -44,7 +44,7 @@ if st.session_state.aktuelle_aufgabe:
     st.markdown("### 🐆 Gerade in Arbeit:")
     st.markdown(f"""
     <div style='
-        border: 2px dotted hotpink;
+        border: 3px solid hotpink;
         padding: 20px;
         border-radius: 30px;
         background-image: url("https://wallpaperaccess.com/full/841574.jpg");
