@@ -46,7 +46,7 @@ if st.session_state.aktuelle_aufgabe:
     <div style='border: 3px solid hotpink;
         padding: 20px;
         border-radius: 30px;
-        background-image: url("https://media.tenor.com/uXDswYPRqrMAAAAC/glitter-sparkle.gif");
+        background-image: url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTA5enp2dDBpeGNxZjFrMWNtcG9udThoYmVvM3FtZTZ5bmtuOGt3eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l378b9LcC3cclsY2A/giphy.gif");
         background-size: cover;
         font-weight: bold;
         text-align: center;
