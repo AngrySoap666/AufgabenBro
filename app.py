@@ -43,7 +43,7 @@ if st.button("🦩 Welche Aufgabe soll ich machen? 🦩"):
 if st.session_state.aktuelle_aufgabe:
     st.markdown("### 🐆 Gerade in Arbeit:")
     st.markdown(f"""
-    <div style=
+    <div style='
         border: 4px dotted hotpink;
         padding: 20px;
         border-radius 20px;
@@ -51,7 +51,7 @@ if st.session_state.aktuelle_aufgabe:
         box-shadow: 0 0 20px 5px rgba(255, 105, 180, 0.8);
         color: deeppink
         font-weight: bold;
-        font-size: 28px;
+        font-size: 22px;
         text-align: center;
         animation: pulse 2s infinite;
     '>    
