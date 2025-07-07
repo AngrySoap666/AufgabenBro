@@ -55,9 +55,10 @@ if st.session_state.aktuelle_aufgabe:
         font-size: 22px;
         text-align: center;
         animation: pulse 1.5s infinite;
-        <span style='color: #4B0082; font-size: 26px;'>✨ {st.session_state.aktuelle_aufgabe} ✨</div>""",
+        <span style='color: #4B0082; font-size: 26px;'>✨ {st.session_state.aktuelle_aufgabe} ✨</div>",
         unsafe_allow_html=True)
-     st.markdown(f"""<div style='font-size: 16px; color: #c71585;'>🐆 du machst das mega 💖</div>""", unsafe_allow_html=True)
+     st.markdown(f"<div style='font-size: 16px; color: #c71585;'>🐆 du machst das mega 💖</div>",
+        unsafe_allow_html=True)
 
     if st.session_state.start_time:
         vergangene_zeit = time.time() - st.session_state.start_time
