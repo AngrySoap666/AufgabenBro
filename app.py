@@ -1,5 +1,6 @@
 import streamlit as st
 import random
+import time
 
 st.markdown("<h1 style='color:hotpink;'>🐢 Larrys Aufgaben-Bro 🐆</h1>", unsafe_allow_html=True)
 
@@ -16,6 +17,10 @@ alle_aufgaben = [
 if "verbleibende_aufgaben" not in st.session_state:
     st.session_state.verbleibende_aufgaben = alle_aufgaben.copy()
 
+if "start_time" not in st.session_state:
+    st.sesion_state.start_time = None
+    
+
 if "verlauf" not in st.session_state:
     st.session_state.verlauf = []
 
@@ -30,6 +35,7 @@ if st.button("🦩 Welche Aufgabe soll ich machen? 🦩"):
         neue_aufgabe = random.choice(st.session_state.verbleibende_aufgaben)
         st.session_state.verbleibende_aufgaben.remove(neue_aufgabe)
         st.session_state.aktuelle_aufgabe = neue_aufgabe
+        st.session_state.start_time = time.time()
     else:
         st.image("https://media4.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif", caption="🎆DU HAST ALLES GESCHAFFT!!! 💖 Schildegard sagt: CHILL, Baby 💖")
         st.session_state.aktuelle_aufgabe = None
@@ -37,7 +43,14 @@ if st.button("🦩 Welche Aufgabe soll ich machen? 🦩"):
 # In Progress
 if st.session_state.aktuelle_aufgabe:
     st.markdown("### 🐆 Gerade in Arbeit:")
-    st.info(f"🚧 **{st.session_state.aktuelle_aufgabe}**")
+    st.info(f"🚧 **{st.session_state.aktuelle_aufgabe}** 🐢💨")
+    if st.session_state.start_time:
+        vergangene_zeit = time.time() - st.session_state.start_time
+        if vergangene_zeit > 900:
+            st.warning("⏰ Du bist schon 15 Minuten am schuften! Willst du eine kleine Rauchi-Pausi machen?")
+
+if st.button("⏸️ Ich brauch kurz Pause")
+   st.info("🍵Pausenmodus aktiviert. Nimm dir Zeit - du machst das toll!✨")
 
 # Erledigt
 if st.session_state.verlauf:
