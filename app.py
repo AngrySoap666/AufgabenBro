@@ -48,7 +48,6 @@ if st.session_state.aktuelle_aufgabe:
         border-radius: 30px;
         background-image: url("https://img1.picmix.com/output/stamp/normal/7/3/8/2/2292837_f7f8b.gif");
         background-size: cover;
-        color: deeppink;
         font-weight: bold;
         text-align: center;
         display: block;
