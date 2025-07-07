@@ -73,7 +73,7 @@ if st.session_state.aktuelle_aufgabe:
 
 with st.sidebar:
     if st.session_state.aktuelle_aufgabe:
-        if st.button("⏸️ Pause")
+        if st.button("⏸️ Pause"):
             st. info("Kleine Pause eingelegt ☕")
 
 # Erledigt
