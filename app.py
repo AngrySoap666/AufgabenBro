@@ -52,7 +52,7 @@ if st.session_state.aktuelle_aufgabe:
         text-align: center;
         display: block;
         animation: pulse 1.5s infinite;
-        <span style='color: #4B0082;
+        style='color: #4B0082;
         font-size: 26px;
         '>✨ {st.session_state.aktuelle_aufgabe} ✨</div>""",
         unsafe_allow_html=True)
