@@ -3,8 +3,7 @@ import random
 import time
 
 with st.sidebar:
-    if st.session_state.aktuelle_aufgabe:
-        if st.button("wird bald erweitert"):
+    if st.button("wird bald erweitert"):
             st. info("freu dich drauf hihi☕")
 
 st.markdown("<h1 style='color:hotpink;'>🐢 Larrys Aufgaben-Bro 🐆</h1>", unsafe_allow_html=True)
