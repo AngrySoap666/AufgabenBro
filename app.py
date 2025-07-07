@@ -44,14 +44,19 @@ if st.session_state.aktuelle_aufgabe:
     st.markdown("### 🐆 Gerade in Arbeit:")
     st.markdown(f"""
     <div style=
-        border: 4px dashed hotpink;
-        padding: 10px;
-        border-radius 15px;
-        background: linear-gradient(45deg, #ffe6f9, #ffd1ff);
-        box-shadow: 0 0 15px pink;
-        text-align: center'>
-        <strong style='font-size: 24px;'>✨ {st.session_state.aktuelle_aufgabe} ✨</strong><br>
-        <span style='color: #c00cc;'>🐆 du machst das mega 💖</span>
+        border: 4px dotted hotpink;
+        padding: 20px;
+        border-radius 20px;
+        background: linear-gradient(135deg, #ffe6f0, #ffccff);
+        box-shadow: 0 0 20px 5px rgba(255, 105, 180, 0.8);
+        color: deeppink
+        font-weight: bold;
+        font-size: 22px;
+        text-align: center;
+        animation: pulse 2s infinite;
+    '>    
+        ✨ {st.session_state.aktuelle_aufgabe} ✨<br>
+        <span style='font-size: 16px; color: #c71585;'>🐆 du machst das mega 💖</span>
     </div>
     """, unsafe_allow_html=True)
 
