@@ -49,7 +49,7 @@ if st.session_state.aktuelle_aufgabe:
         if vergangene_zeit > 900:
             st.warning("⏰ Du bist schon 15 Minuten am schuften! Willst du eine kleine Rauchi-Pausi machen?")
 
-if st.button("⏸️ Ich brauch kurz Pause")
+if st.button("⏸️ Ich brauch kurz Pause"):
    st.info("🍵Pausenmodus aktiviert. Nimm dir Zeit - du machst das toll!✨")
 
 # Erledigt
