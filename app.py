@@ -54,7 +54,7 @@ if st.session_state.aktuelle_aufgabe:
         <strong style='font-size: 24px;'>✨ {st.session_state.aktuelle_aufgabe} ✨</strong><br>
         <span style='color: #c00cc;'>🐆 du machst das mega 💖</span>
     </div>
-    """, unsafe_allow-html=True)
+    """, unsafe_allow_html=True)
 
 
 
