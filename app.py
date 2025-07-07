@@ -42,20 +42,7 @@ if st.button("🦩 Welche Aufgabe soll ich machen? 🦩"):
 # In Progress
 if st.session_state.aktuelle_aufgabe:
     st.markdown("### 🐆 Gerade in Arbeit:")
-    st.markdown(f"""
-    <div style='
-        border: 3px solid hotpink;
-        padding: 20px;
-        border-radius: 30px;
-        background-image: url("https://wallpaperaccess.com/full/841574.jpg");
-        background-size: cover;
-        box-shadow: 0 0 10px hot pink, 0 0 20px deeppink, 0 0 30px pink;
-        color: deeppink;
-        font-weight: bold;
-        font-size: 22px;
-        text-align: center;
-        animation: pulse 1.5s infinite;
-        <span style='color: #4B0082; font-size: 26px;'>✨ {st.session_state.aktuelle_aufgabe} ✨</div>",
+    st.markdown(f"<div style='border: 3px solid hotpink; padding: 20px; border-radius: 30px; background-image: url("https://wallpaperaccess.com/full/841574.jpg"); background-size: cover; color: deeppink; font-weight: bold; font-size: 22px; text-align: center; animation: pulse 1.5s infinite; <span style='color: #4B0082; font-size: 26px;'>✨ {st.session_state.aktuelle_aufgabe} ✨</div>",
         unsafe_allow_html=True)
      st.markdown(f"<div style='font-size: 16px; color: #c71585;'>🐆 du machst das mega 💖</div>",
         unsafe_allow_html=True)
