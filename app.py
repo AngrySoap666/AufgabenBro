@@ -50,8 +50,10 @@ if st.session_state.aktuelle_aufgabe:
         background-size: cover;
         font-weight: bold;
         text-align: center;
+        color: #68228B;
         display: block;
         animation: pulse 1.5s infinite;
+        <span
         style='color: #4B0082;
         font-size: 26px;
         '>✨ {st.session_state.aktuelle_aufgabe} ✨</div>""",
