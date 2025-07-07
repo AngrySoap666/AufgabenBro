@@ -44,7 +44,7 @@ if st.session_state.aktuelle_aufgabe:
     st.markdown("### 🐆 Gerade in Arbeit:")
     st.markdown(f"""
     <div style='
-        border: 4px dotted hotpink;
+        border: 4px dashed hotpink;
         padding: 20px;
         border-radius: 20px;
         background: linear-gradient(135deg, #ffe6f0, #ffccff);
@@ -53,7 +53,7 @@ if st.session_state.aktuelle_aufgabe:
         font-weight: bold;
         font-size: 22px;
         text-align: center;
-        animation: pulse 2s infinite;
+        animation: pulse 1s infinite;
     '>    
         ✨ {st.session_state.aktuelle_aufgabe} ✨ <br>
         <span style='font-size: 16px; color: #c71585;'>🐆 du machst das mega 💖</span>
